@@ -21,6 +21,7 @@ public class Product {
 
         //CONSTRUCTORS
         public Product() {
+
                 code = rnd.nextInt(1,500);
         }
 
@@ -32,14 +33,13 @@ public class Product {
                 this.iva = iva;
         }
 
-        // GETTER e SETTER
+        //GETTER $ SETTER
         public int getCode() {
                 return code;
         }
         public String getName() {
                 return name;
         }
-
         public void setName(String name) {
                 this.name = name;
         }
