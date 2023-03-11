@@ -4,11 +4,9 @@ import java.text.DecimalFormat;
 import java.util.Random;
 
 public class Count {
-
 /*      - numero di conto
         - nome del proprietario
         - saldo*/
-
     private int countNumber;
     private String userName;
     private double balance;
@@ -46,9 +44,8 @@ public class Count {
             return true;
         }
     }
-
     public String getCountInfo(){
         DecimalFormat df = new DecimalFormat("0.00");
-        return "Count number: " + countNumber + " "  + "UserName: " + userName + "Balance : " + df.format(balance) + " $";
+        return "Count number: " + countNumber + " "  + "UserName: " + userName + " " + "Balance : " + df.format(balance) + " $";
     }
 }
