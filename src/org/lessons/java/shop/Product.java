@@ -21,7 +21,6 @@ public class Product {
 
         //CONSTRUCTORS
         public Product() {
-
                 code = rnd.nextInt(1,500);
         }
 
@@ -33,7 +32,7 @@ public class Product {
                 this.iva = iva;
         }
 
-        //GETTER $ SETTER
+        //GETTER & SETTER
         public int getCode() {
                 return code;
         }
@@ -49,14 +48,12 @@ public class Product {
         public void setDescription(String description) {
                 this.description = description;
         }
-
         public double getPrice() {
                 return price;
         }
         public void setPrice(double price) {
                 this.price = price;
         }
-
         public int getIva() {
                 return iva;
         }
@@ -72,12 +69,15 @@ public class Product {
         }
         public String priceWithoutIva() {
                 DecimalFormat df = new DecimalFormat("0.00");
-                String notTaxed = df.format(price);
-                return notTaxed;
+                return df.format(price);
         }
         public String completeName() {
-                String completeName = code+name;
+                String completeName = codeWithZeros()+"-"+name;
                 return  completeName;
+        }
+        public String codeWithZeros(){
+                DecimalFormat df = new DecimalFormat("00000000");
+                return df.format(code);
         }
 
 }
